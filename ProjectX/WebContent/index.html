@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ProjectX">
+<html ng-app="projectx">
 <head>
 <meta charset="utf-8">
 <title>ProjectX</title>
@@ -9,18 +9,23 @@
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/ProjectX.js"></script>
 <script type="text/javascript" src="js/Building.js"></script>
+<script type="text/javascript" src="js/refurbishment.js"></script>
 </head>
 <body>
 	<div class="container-fluid" id="container">
 	<h1>ProjectX</h1>
 	<ul class="nav nav-tabs">
 		<li role="presentation" class="active"> <a href="#building" data-toggle="tab" > Byggnad</a></li>
+		<li role="presentation"> <a href="#refurbishment" data-toggle="tab">Åtgärd</a></li>
 		</ul>
 		<div class="tab-content">
-			<div class="tab-pane fade in active" id="building">
+			<div class="tab-pane fade in active"  id="building">
 			
+			<building/>
 			</div>
-		
+		<div class="tab-pane fade" id="refurbishment">
+		<refurbishment/>
+		</div>
 		</div>
 	
 	

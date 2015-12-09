@@ -1,1 +1,1 @@
-var app = angular.module("ProjectX" ,['directives']);
+var app = angular.module('projectx' ,['projectx.directives', 'projectx.direct']);
