@@ -1,4 +1,4 @@
-angular.module('projectx.direct', [])
+angular.module('projectx.refurbishment', [])
 .controller('refurbishmentcontroller', [], function($scope)
 		{$scope.refurbishment={}})
 .directive('refurbishment', function(){
