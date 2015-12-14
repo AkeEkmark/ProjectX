@@ -1,46 +1,46 @@
 
-<div class="container" style="background-color:Magenta;">
-<div class="form-group col-sm-4 col-xs-12" 
-	>
+<div class="panel panel-default" style="background-color:Coral;">
+<div class="panel-body" >
+<div class="form-group col-sm-4 col-xs-12" >
       
     
-  <label for="sel1">Select list:</label>
+  <label for="sel1">Ort:</label>
   <select class="form-control" id="sel1" ng-model="building.city" ng-init="building.city='0'">
   
-    <option value="0">VÃ¤lj stad</option>
-    <option value="Gavle">GÃ¤vle</option>
+    <option value="0">Välj stad</option>
+    <option value="Gavle">Gävle</option>
     <option value="Stockholm">Stockholm</option>
-    <option>4</option>
+  
   </select>
   {{building.city}}
   <div class="form-group">
-  <label for="sel1">Select list:</label>
-  <select class="form-control" id="sel1">
-    <option>VÃ¤lj Ã¥rtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
+  <label for="sel2">Byggår:</label>
+  <select class="form-control" id="sel2" ng-model="building.year" ng-init="building.year='0'">
+    <option value="0">Välj årtal</option>
+    <option value="-1920">-1920</option>
+    <option value="1921-1940">1921-1940</option>
+   
   </select>
 </div>
 
 </div>
 <div class="form-group col-sm-4 col-xs-12">
-<label for="sel1">Select list:</label>
-<select class="form-control" id="sel1">
-    <option>VÃ¤lj Ã¥rtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
+<label for="sel3">Byggnadstyp:</label>
+<select class="form-control" id="sel3" ng-model="building.type" ng-init="building.type='0'">
+    <option value="0">Välj byggnadstyp</option>
+    <option value="home">Bostad</option>
+    <option value="place">Lokal</option>
+  
   </select>
 </div>
- <div class="form-group col-sm-4 col-xs-12">
-<label for="sel1">Select list:</label>
-<select class="form-control" id="sel1">
-    <option>VÃ¤lj Ã¥rtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
+<label for="sel4">Uppvärmd yta:</label>
+ <div class="input-group col-sm-4 col-xs-12">
+<input type="number" class="form-control" id="sel4" ng-model="building.heatedarea" placeholder="Välj uppvärmd yta:">
+
+  </input>
+  <span class="input-group-addon" >m<sup>2</sup></span>
   </div>
+  
   <div class="col-sm-2 col-sm-offset-10 col-xs-6 col-xs-offset-6"><button  type="button" class="btn btn-default col-xs-12 "><a href="#refurbishment" data-toggle="tab">KÃ¶r</a></button></div>
+</div>
 </div>
