@@ -1,10 +1,10 @@
 angular.module('projectx.building', [])
-.controller('buildingcontroller', [], function($scope) {
+.controller('buildingcontroller', ['$scope', function($scope, $http) {
 	
 	$scope.getData=function(){
 		$http({
 			method: 'GET',
-			url:'/api/Building',
+			url:'/api/Building'
 			
 		})
 		.success(function(data){
@@ -16,14 +16,15 @@ angular.module('projectx.building', [])
 	};
 	$scope.building={}
 	
-})
+}])
 .directive('building', function(){
 	return {
 		restrict: 'E',
 		replace: 'true',
+		
 		templateUrl: 'templates/building.html',
 		link:function(scope, element, attrs){
-			scope.getData()
+			scope.getData();
 		}
 	};
 });

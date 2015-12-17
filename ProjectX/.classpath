@@ -8,8 +8,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/home/ake/apache-tomcat-8.0.21/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/apache-tomcat-8.0.21/lib/servlet-api.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/ake/git/ProjectX/ProjectX/jars/genson-1.3.jar"/>
+	<classpathentry kind="lib" path="H:/git/ProjectX/ProjectX/jars/genson-1.3.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
