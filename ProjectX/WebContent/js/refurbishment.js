@@ -1,6 +1,9 @@
 angular.module('projectx.refurbishment', [])
-.controller('refurbishmentcontroller', [], function($scope)
-		{$scope.refurbishment={}})
+.controller('refurbishmentcontroller', [], function($scope)	{
+	
+	$scope.refurbishment={}
+	
+})
 .directive('refurbishment', function(){
 	return {
 		restrict: 'E',

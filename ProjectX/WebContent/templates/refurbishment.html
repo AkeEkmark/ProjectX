@@ -1,48 +1,42 @@
 
-<div class="panel panel-default" style="background-color:GoldenRod;">
+<div class="panel panel-default" style="background-color:rgb(38,97,156);">
 <div class="panel-body" >
 <div class="form-group col-sm-4 col-xs-12" 
 	>
       
     
-  <label for="sel1">Select list:</label>
-  <select class="form-control" id="sel1" ng-model="refurbishment.city" ng-init="refurbishment.city='0'">
+  <label for="sel1">Vindsbjälklag:</label>
+  <select class="form-control" id="sel1" ng-model="refurbishment.roofceilingjoist" ng-init="refurbishment.roofceilingjoist='0'">
   
-    <option value="0">Välj stad</option>
-    <option value="Gavle">Gävle</option>
-    <option value="Stockholm">Stock</option>
-    <option>4</option>
+    <option value="0">Välj åtgärd</option>
+    <option value="100">Tilläggsisolering 100 mm</option>
+    <option value="200">Tilläggsisolering 200 mm</option>
+    <option value="400">Tilläggsisolering 400 mm</option>
   </select>
-  {{refurbishment.city}}
-  <div class="form-group">
-  <label for="sel1">Select list:</label>
-  <select class="form-control" id="sel1">
-    <option>Välj årtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-</div>
+  
 
 </div>
 <div class="form-group col-sm-4 col-xs-12">
-<label for="sel1">Select list:</label>
-<select class="form-control" id="sel1">
-    <option>Välj årtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
+  <label for="sel2">Bottenbjälklag:</label>
+  <select class="form-control" id="sel2" ng-model="refurbishment.tieroflogs" ng-init="refurbishment.tieroflogs ='0'">
+    <option value="0">Välj åtgärd</option>
+    <option value="200">Tilläggsisolering 200 mm</option>
+ 
   </select>
 </div>
- <div class="form-group col-sm-4 col-xs-12">
-<label for="sel1">Select list:</label>
-<select class="form-control" id="sel1">
-    <option>Välj årtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
+
+<div class="form-group col-sm-4 col-xs-12">
+<label for="sel3">Ytterväggar:</label>
+<select class="form-control" id="sel3" ng-model="refurbishment.outerwalls" ng-init="refurbishment.outerwalls ='0'">
+    <option value="0">Välj åtgärd</option>
+    <option value="70 woodwall">Tilläggsisolering 70 mm utvändigt på trävägg</option>
+    <option value="120">Tilläggsisolering 120 mm utvändigt på lättbetongvägg</option>
+    <option value="200">Tilläggsisolering 200 mm cellplast + puts</option>
+    <option value="70 cellarwall">Tilläggsisolering 70 mm på källarväggar</option>
+    <option value="95">Tilläggsisolering 95 mm plåt</option>
   </select>
-  </div>
-  <div class="col-sm-2 col-sm-offset-10 col-xs-6 col-xs-offset-6"><button type="button" class="btn btn-default col-xs-12 ">Kör</button></div>
+</div>
+ 
+  <div class="col-sm-2 col-sm-offset-10 col-xs-6 col-xs-offset-6"><button type="button" class="btn btn-default col-xs-12 "><a href="#result" data-toggle="tab">Kör</button></div>
 </div>
 </div>
