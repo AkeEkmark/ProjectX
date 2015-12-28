@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.owlike.genson.Genson;
+import com.sun.javafx.image.impl.General;
+
 /**
  * Servlet implementation class Building
  */
@@ -25,6 +28,7 @@ public class Building extends HttpServlet {
 		response.setContentType("application/json;charset=UTF-8");
 		
 		try (PrintWriter out = response.getWriter()) {
+			Genson genson = new Genson();
 			out.print("{"
 					+ "'cities' : ['Gävle', 'Stockholm'],"
 					+ "'yearspans' : ['-1920', '1921-1940'],"
