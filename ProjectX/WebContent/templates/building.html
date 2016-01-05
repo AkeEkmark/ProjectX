@@ -1,37 +1,26 @@
 
 <div class="panel panel-default" style="background-color:rgb(38,156,156);">
 <div class="panel-body" >
-<div class="form-group col-lg-3 col-sm-6 col-xs-12" >
-         
+<div class="form-group col-lg-4 col-sm-6 col-xs-12" >
   <label for="sel1">Ort:</label>
   <select class="form-control" id="sel1" ng-model="building.city" ng-init="building.city='0'">
     <option value="0">Välj stad</option>
     <option ng-repeat="city in data.cities">{{ city }}</option>
   </select>
-  </div>
-  <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+ </div>
+ 
+  <div class="form-group col-lg-4 col-sm-6 col-xs-12">
   <label for="sel2">Byggår:</label>
   <select class="form-control" id="sel2" ng-model="building.year" ng-init="building.year='0'">
     <option value="0">Välj årtal</option>
     <option ng-repeat="yearspan in data.yearspan">{{ yearspan }}</option>
-    
-   
   </select>
 </div>
 
 
-<div class="form-group col-lg-3 col-sm-6 col-xs-12">
-<label for="sel3">Byggnadstyp:</label>
-<select class="form-control" id="sel3" ng-model="building.type" ng-init="building.type='0'">
-    <option value="0">Välj byggnadstyp</option>
-    <option value="home">Bostad</option>
-    <option value="place">Lokal</option>
-  
-  </select>
-</div>
-<label for="sel4">Uppvärmd yta:</label>
- <div class="input-group col-lg-3 col-sm-6 col-xs-12">
-<input type="number" class="form-control" id="sel4" ng-model="building.heatedarea" placeholder="Välj uppvärmd yta:">
+<label for="sel3">Uppvärmd yta:</label>
+ <div class="input-group col-lg-4 col-sm-6 col-xs-12">
+<input type="number" class="form-control" id="sel3" ng-model="building.heatedarea" placeholder="Välj uppvärmd yta:">
 
   </input>
   <span class="input-group-addon" >m<sup>2</sup></span>
