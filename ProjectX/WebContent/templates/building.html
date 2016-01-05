@@ -2,23 +2,19 @@
 <div class="panel panel-default" style="background-color:rgb(38,156,156);">
 <div class="panel-body" >
 <div class="form-group col-lg-3 col-sm-6 col-xs-12" >
-      
-    
+         
   <label for="sel1">Ort:</label>
   <select class="form-control" id="sel1" ng-model="building.city" ng-init="building.city='0'">
-  
     <option value="0">Välj stad</option>
-    <option value="Gavle">Gävle</option>
-    <option value="Stockholm">Stockholm</option>
-  
+    <option ng-repeat="city in data.cities">{{ city }}</option>
   </select>
   </div>
   <div class="form-group col-lg-3 col-sm-6 col-xs-12">
   <label for="sel2">Byggår:</label>
   <select class="form-control" id="sel2" ng-model="building.year" ng-init="building.year='0'">
     <option value="0">Välj årtal</option>
-    <option value="-1920">-1920</option>
-    <option value="1921-1940">1921-1940</option>
+    <option ng-repeat="yearspan in data.yearspan">{{ yearspan }}</option>
+    
    
   </select>
 </div>
