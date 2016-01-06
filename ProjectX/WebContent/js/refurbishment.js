@@ -12,10 +12,10 @@ angular.module('projectx.refurbishment', [])
 					
 				})
 				.success(function(data){
-					$scope.data=data;
+					$scope.datar=data;
 				})
 				.error(function(){
-					$scope.data={};
+					$scope.datar={};
 				});
 			};
 			$scope.refurbishment={}

@@ -18,7 +18,12 @@ angular.module('projectx.building', [])
 					$scope.data={};
 				});
 			};
-			$scope.building={}
+			$scope.building={};
+			$scope.building.heatedarea = 100;
+			$scope.building.levels = 1;
+			$scope.circum = function() { return 2*(11.5 + ($scope.building.heatedarea / $scope.building.levels) / 11.5) + 2 };
+			
+			
 		},
 		link:function(scope, element, attrs){
 			scope.getData();

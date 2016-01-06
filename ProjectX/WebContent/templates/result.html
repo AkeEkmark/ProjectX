@@ -1,48 +1,12 @@
-
 <div class="panel panel-default" style="background-color:rgb(128,128,0);">
-<div class='panel-body'>
-<div class="form-group col-sm-4 col-xs-12" 
-	>
-      
-    
-  <label for="sel1">Select list:</label>
-  <select class="form-control" id="sel1" ng-model="result.city" ng-init="result.city='0'">
-  
-    <option value="0">Välj stad</option>
-    <option value="Gavle">Gävle</option>
-    <option value="Stockholm">Stock</option>
-    <option>4</option>
-  </select>
-  {{refurbishment.city}}
-  <div class="form-group">
-  <label for="sel2">Select list:</label>
-  <select class="form-control" id="sel2">
-    <option>Välj årtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-</div>
-
-</div>
-<div class="form-group col-sm-4 col-xs-12">
-<label for="sel3">Select list:</label>
-<select class="form-control" id="sel3">
-    <option>Välj årtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-</div>
- <div class="form-group col-sm-4 col-xs-12">
-<label for="sel4">Select list:</label>
-<select class="form-control" id="sel4">
-    <option>Välj årtal</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <div class="col-sm-2 col-sm-offset-10 col-xs-6 col-xs-offset-6"><button type="button" class="btn btn-default col-xs-12 ">Kör</button></div>
-</div>
+	<div class="panel-body">
+		<h1>Resultat</h1>
+		<div class="col-xs-4">
+			<h3>Byggnad</h3>
+			<p>Stad : {{ building.city }}</p>
+			<p>Byggår : {{ building.year }}</p>
+			<p>Boarea : {{ building.heatedarea }}</p>
+		</div>
+		
+	</div>
 </div>

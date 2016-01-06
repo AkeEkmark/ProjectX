@@ -1,25 +1,17 @@
-
 <div class="panel panel-default" style="background-color:rgb(38,97,156);">
 <div class="panel-body" >
 <div class="form-group col-sm-6 col-xs-12">
   <label for="sel1">Vindsbjälklag:</label>
   <select class="form-control" id="sel1" ng-model="refurbishment.roofceilingjoist" ng-init="refurbishment.roofceilingjoist='0'">
     <option value="0">Välj åtgärd</option>
-    <option ng-repeat="tier in data.tieroflogs">{{ tier }}</option>
+    <option ng-repeat="tier in datar.tieroflogs">{{ tier }}</option>
   </select>
-  
-
 </div>
 
 <div class="form-group col-sm-6 col-xs-12">
 <label for="sel2">Ytterväggar:</label>
 <select class="form-control" id="sel2" ng-model="refurbishment.outerwalls" ng-init="refurbishment.outerwalls ='0'">
     <option value="0">Välj åtgärd</option>
-    <option ng-repeat="wall in data.outerwalls">{{ wall }}</option>
-
+    <option ng-repeat="wall in datar.outerwalls">{{ wall }}</option>
   </select>
-</div>
- 
-  <div class="col-sm-2 col-sm-offset-10 col-xs-6 col-xs-offset-6"><button type="button" class="btn btn-default col-xs-12 "><a href="#result" data-toggle="tab">Kör</button></div>
-</div>
 </div>
