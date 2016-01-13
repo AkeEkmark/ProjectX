@@ -6,7 +6,28 @@
 			<p>Stad : {{ building.city }}</p>
 			<p>Byggår : {{ building.year }}</p>
 			<p>Boarea : {{ building.heatedarea }}</p>
+			<p>Omkrets : {{ 2*(11.5 + (building.heatedarea / building.levels) / 11.5) + 2 | number:2 }} m</p>
+			<p>Fönsterarea : {{ building.heatedarea * 0.1  | number:2 }} m<sup>2</sup></p>
+			<p>Dörryta : {{ building.heatedarea * 0.025  | number:2 }} m<sup>2</sup></p>
+			<p>Fasadarea : {{ (2*(11.5 + (building.heatedarea / building.levels) / 11.5)+2) * 2.8 * building.levels - building.heatedarea * 0.1 - building.heatedarea * 0.025  | number:2 }} m<sup>2</sup></p>
+			<p>Vindsbjälklagarea: {{ building.heatedarea / building.levels | number:2 }} m<sup>2</sup></p>
+			<p>Bottenbjälklagarea: {{ building.heatedarea / building.levels | number:2 }} m<sup>2</sup></p>
 		</div>
-		
+		<div class="col-xs-4">
+			<h3>Valda åtgärder</h3>
+			<p ng-if="refurbishment.roofceilingjoist != 0">Vindsbjälklag : {{ refurbishment.roofceilingjoist }}</p>
+			<p ng-if="refurbishment.outerwalls != 0">Ytterväggar : {{ refurbishment.outerwalls }}</p>
+		</div>
+		<div class="col-xs-4">
+			<h3>Resultat av åtgärder</h3>
+			<div ng-show="roofdata">
+				<p>Kostnad av åtgärd på vindbjälklag: {{ building.heatedarea / building.levels * roofdata.investmentcost | number:2 }} kr</p>
+				<p>Klimatpåverkan av åtgärd på vindbjälklag: {{ building.heatedarea / building.levels * roofdata.climateimpact | number:2 }} Kg CO<sub>2</sub> ekvivalent / år</p>
+			</div>
+			<div ng-show="walldata">
+				<p>Kostnad av åtgärd på yttervägg: {{ ((2*(11.5 + (building.heatedarea / building.levels) / 11.5)+2) * 2.8 * building.levels - building.heatedarea * 0.1 - building.heatedarea * 0.025) * walldata.investmentcost | number:2 }} kr</p>
+				<p>Klimatpåverkan av åtgärd på yttervägg: {{ ((2*(11.5 + (building.heatedarea / building.levels) / 11.5)+2) * 2.8 * building.levels - building.heatedarea * 0.1 - building.heatedarea * 0.025) * walldata.climateimpact | number:2 }} Kg CO<sub>2</sub> ekvivalent / år</p>
+			</div>
+		</div>
 	</div>
 </div>

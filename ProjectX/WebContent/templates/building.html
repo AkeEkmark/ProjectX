@@ -38,22 +38,22 @@
 		</div>
 		<div class="row col-xs-12">
 		<div class="col-lg-2 col-sm-6 col-xs-12 label label-primary">
-			<span>Omkrets : {{ building.circum() }} m</span>
+			<span>Omkrets : {{ 2*(11.5 + (building.heatedarea / building.levels) / 11.5) + 2 | number:2 }} m</span>
 		</div>
 		<div class="col-lg-2 col-sm-6 col-xs-12 label label-primary">
-			<span>Fönsterarea : {{ building.heatedarea * 0.1 }} m<sup>2</sup></span>
+			<span>Fönsterarea : {{ building.heatedarea * 0.1  | number:2 }} m<sup>2</sup></span>
 		</div>
 		<div class="col-lg-2 col-sm-6 col-xs-12 label label-primary">
-			<span>Dörryta : {{ building.heatedarea * 0.025 }} m<sup>2</sup></span>
+			<span>Dörryta : {{ building.heatedarea * 0.025  | number:2 }} m<sup>2</sup></span>
 		</div>
 		<div class="col-lg-2 col-sm-6 col-xs-12 label label-primary">
-			<span>Fasadarea : {{ (2*(11.5 + (building.heatedarea / building.levels) / 11.5)+2) * 2.8 * building.levels - building.heatedarea * 0.1 - building.heatedarea * 0.025 }} m<sup>2</sup></span>
+			<span>Fasadarea : {{ (2*(11.5 + (building.heatedarea / building.levels) / 11.5)+2) * 2.8 * building.levels - building.heatedarea * 0.1 - building.heatedarea * 0.025  | number:2 }} m<sup>2</sup></span>
 		</div>
 		<div class="col-lg-2 col-sm-6 col-xs-12 label label-primary">
-			<span>Vindsbjälklagarea: {{ building.heatedarea / building.levels }} m<sup>2</sup></span>
+			<span>Vindsbjälklagarea: {{ building.heatedarea / building.levels | number:2 }} m<sup>2</sup></span>
 		</div>
 		<div class="col-lg-2 col-sm-6 col-xs-12 label label-primary">
-			<span>Bottenbjälklagarea: {{ building.heatedarea / building.levels }} m<sup>2</sup></span>
+			<span>Bottenbjälklagarea: {{ building.heatedarea / building.levels | number:2 }} m<sup>2</sup></span>
 		</div>
 		</div>
 		
